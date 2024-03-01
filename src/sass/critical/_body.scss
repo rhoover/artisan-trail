@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "assistant";
+  src: local("assistant"), url("/fonts/assistantLight.woff") format("woff");
+  font-display: swap;
+}
+
+body {
+  display: grid;
+  row-gap: 1rem;
+  background: scalecolor(white, base);
+  font-family: "assistant", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  color: scalecolor(black, dark25);
+}
+a {
+  font-size: $fluid-0;
+  color: scalecolor(green, dark15);
+  font-weight: 700;
+}
+ul, ol, p {
+  font-size: $fluid-0;
+}
+h2 { 
+  font-size: $fluid-1;
+}
+h1 { 
+  font-size: $fluid-2;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 1.75s;
+}

@@ -1,0 +1,21 @@
+%choose {
+  text-decoration: none;
+  color: inherit;
+  font-size: calc($fluid-0 * 0.75);
+  background-color: scalecolor(white, light55);
+  height: 4rem;
+  padding: .5rem;
+  border-radius: 0.5rem;
+  border: 1px solid scalecolor(blue, dark25);
+  @extend %box-shadow;
+  cursor: pointer;
+}
+
+%choose-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  grid-template-rows: min-content;
+  grid-gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid scalecolor(blue, base);
+}

@@ -1,0 +1,29 @@
+.scroller {
+  position: fixed;
+  right: 0;
+  border-radius: 30% 0% 0% 30%;
+  border-left: 1px solid scalecolor(blue, dark25);
+  @extend %scroll-share;
+  opacity: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 14px;
+    left: 17px;
+    transform: rotate(45deg);
+    background: transparent;
+    border-top: .3em solid scalecolor(white, light35);
+    border-left: .3em solid scalecolor(white, light35);
+  }
+  &-visible {
+    opacity: 1;
+  }
+  & p {
+    position: absolute;
+    top: 30px;
+    left: 14px;
+    color: scalecolor(white, light35);
+  }
+}

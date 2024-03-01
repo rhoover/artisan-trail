@@ -1,0 +1,123 @@
+@function scale-color-lightDark($color, $amount: 0%) {
+  @if $amount == 0 {$amount: 0%;}
+  @return scale-color($color, $lightness: $amount);
+}
+
+// And now, onto the show:
+$green: rgb(115, 141, 118);
+$blue: rgb(91, 109, 200);
+$red: rgb(182, 150, 148);
+$white: rgb(240, 240, 240);
+$black: rgb(44, 44, 44);
+
+//Courtesy: http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+$colors: (
+  green: (
+    dark85: scale-color-lightDark($green, -85%),
+    dark75: scale-color-lightDark($green, -75%),
+    dark65: scale-color-lightDark($green, -65%),
+    dark55: scale-color-lightDark($green, -55%),
+    dark45: scale-color-lightDark($green, -45%),
+    dark35: scale-color-lightDark($green, -35%),
+    dark25: scale-color-lightDark($green, -25%),
+    dark15: scale-color-lightDark($green, -15%),
+    base: $green,
+    light10: scale-color-lightDark($green, 10%),
+    light15: scale-color-lightDark($green, 15%),
+    light25: scale-color-lightDark($green, 25%),
+    light35: scale-color-lightDark($green, 35%),
+    light45: scale-color-lightDark($green, 45%),
+    light55: scale-color-lightDark($green, 55%),
+    light65: scale-color-lightDark($green, 65%),
+    light75: scale-color-lightDark($green, 75%),
+    light85: scale-color-lightDark($green, 85%),
+    light95: scale-color-lightDark($green, 95%),
+    light98: scale-color-lightDark($green, 98%),
+  ),
+  blue: (
+    dark85: scale-color-lightDark($blue, -85%),
+    dark75: scale-color-lightDark($blue, -75%),
+    dark65: scale-color-lightDark($blue, -65%),
+    dark55: scale-color-lightDark($blue, -55%),
+    dark45: scale-color-lightDark($blue, -45%),
+    dark35: scale-color-lightDark($blue, -35%),
+    dark25: scale-color-lightDark($blue, -25%),
+    dark15: scale-color-lightDark($blue, -15%),
+    base: $blue,
+    light15: scale-color-lightDark($blue, 15%),
+    light25: scale-color-lightDark($blue, 25%),
+    light35: scale-color-lightDark($blue, 35%),
+    light45: scale-color-lightDark($blue, 45%),
+    light55: scale-color-lightDark($blue, 55%),
+    light65: scale-color-lightDark($blue, 65%),
+    light75: scale-color-lightDark($blue, 75%),
+    light85: scale-color-lightDark($blue, 85%),
+    light95: scale-color-lightDark($blue, 95%),
+    light98: scale-color-lightDark($blue, 98%),
+  ),
+  red: (
+    dark85: scale-color-lightDark($red, -85%),
+    dark75: scale-color-lightDark($red, -75%),
+    dark65: scale-color-lightDark($red, -65%),
+    dark55: scale-color-lightDark($red, -55%),
+    dark45: scale-color-lightDark($red, -45%),
+    dark35: scale-color-lightDark($red, -35%),
+    dark25: scale-color-lightDark($red, -25%),
+    dark15: scale-color-lightDark($red, -15%),
+    base: $red,
+    light15: scale-color-lightDark($red, 15%),
+    light25: scale-color-lightDark($red, 25%),
+    light35: scale-color-lightDark($red, 35%),
+    light45: scale-color-lightDark($red, 45%),
+    light55: scale-color-lightDark($red, 55%),
+    light65: scale-color-lightDark($red, 65%),
+    light75: scale-color-lightDark($red, 75%),
+    light85: scale-color-lightDark($red, 85%),
+    light95: scale-color-lightDark($red, 95%),
+    light98: scale-color-lightDark($red, 98%),
+  ),
+  white: (
+    dark85: scale-color-lightDark($white, -85%),
+    dark75: scale-color-lightDark($white, -75%),
+    dark65: scale-color-lightDark($white, -65%),
+    dark55: scale-color-lightDark($white, -55%),
+    dark45: scale-color-lightDark($white, -45%),
+    dark35: scale-color-lightDark($white, -35%),
+    dark25: scale-color-lightDark($white, -25%),
+    dark15: scale-color-lightDark($white, -15%),
+    base: $white,
+    light15: scale-color-lightDark($white, 15%),
+    light25: scale-color-lightDark($white, 25%),
+    light35: scale-color-lightDark($white, 35%),
+    light45: scale-color-lightDark($white, 45%),
+    light55: scale-color-lightDark($white, 55%),
+    light65: scale-color-lightDark($white, 65%),
+    light75: scale-color-lightDark($white, 75%),
+    light85: scale-color-lightDark($white, 85%),
+    light95: scale-color-lightDark($white, 95%),
+  ),
+  black: (
+    dark85: scale-color-lightDark($black, -85%),
+    dark75: scale-color-lightDark($black, -75%),
+    dark65: scale-color-lightDark($black, -65%),
+    dark55: scale-color-lightDark($black, -55%),
+    dark45: scale-color-lightDark($black, -45%),
+    dark35: scale-color-lightDark($black, -35%),
+    dark25: scale-color-lightDark($black, -25%),
+    dark15: scale-color-lightDark($black, -15%),
+    base: $black,
+    light15: scale-color-lightDark($black, 15%),
+    light25: scale-color-lightDark($black, 25%),
+    light35: scale-color-lightDark($black, 35%),
+    light45: scale-color-lightDark($black, 45%),
+    light55: scale-color-lightDark($black, 55%),
+    light65: scale-color-lightDark($black, 65%),
+    light75: scale-color-lightDark($black, 75%),
+    light85: scale-color-lightDark($black, 85%),
+  )
+);
+
+// Our function for shorter usage of map-get();
+@function scalecolor($color, $tone: base) {
+  @return map-get(map-get($colors, $color), $tone);
+}

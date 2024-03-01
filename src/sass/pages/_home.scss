@@ -1,0 +1,19 @@
+.home {
+  @extend %artisan-home;
+  &-intro {
+    @extend %artisan-home-intro;
+  }
+  &-content {
+    @extend %artisan-home-content;
+    grid-template-rows: repeat(6, 1fr);
+  }
+  &-item {
+    @extend %artisan-home-item;
+    &-image {
+      @extend %artisan-home-item-image;
+    }
+    &-text {
+      @extend %artisan-home-item-text;
+    }
+  }
+}

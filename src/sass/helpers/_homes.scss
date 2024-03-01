@@ -1,0 +1,83 @@
+%artisan-home {
+  grid-template-rows: max-content;
+  row-gap: 1rem;
+  padding-bottom: 1rem;
+  @include breakpoint($medium) {
+    grid-template-rows: 33%;
+    padding-top: 0px;
+  }
+  &-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    padding: 1rem 0px;
+    border-top: 1px solid scalecolor(blue, light45);
+    border-bottom: 1px solid scalecolor(blue, light45);
+    & p:first-of-type {
+      font-weight: 700;
+      font-size: $fluid-1;
+    }
+    & p:last-of-type {
+      font-weight: 700;
+    }
+    & p {
+      line-height: 2rem;
+    }
+    @include breakpoint($medium) {
+      margin-top: 2.25rem;
+      padding: 2.0rem 0px;
+      grid-row: 1 / 2;
+      text-shadow: none;
+      width: 45%;
+      justify-self: start;
+      align-self: center;
+    }
+  }
+  &-content {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 1.25rem;
+    row-gap: 1.25rem;
+    @include breakpoint($medium) {
+      grid-row: 1 / 4;
+      row-gap: 1.5rem;
+      justify-self: end;
+      width: 50%;
+    }
+  }
+  &-item {
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    border-radius: 0.45rem;
+    border: 2px solid scalecolor(blue, light15);
+    color: scalecolor(black, base);
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    @extend %box-shadow;
+    @extend %animate-helper;
+    transition-property: filter;
+    &-image {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      font-style: italic;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+    }
+    &-text {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      width: 100%;
+      padding: 0.75rem 0px;
+      align-self: center;
+      text-align: center;
+      font-size: $fluid-2;
+      background-color: rgba(scalecolor(white, base), 0.7);
+    }
+  }
+}

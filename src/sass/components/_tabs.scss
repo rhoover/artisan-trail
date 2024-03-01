@@ -1,0 +1,24 @@
+%tabs {
+  grid-column: 1 / 4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  align-self: start;
+  height: 4rem;
+  background-color: scalecolor(white, light55);
+  border-bottom: 1px solid scalecolor(blue, dark25);
+  border-top: 1px solid scalecolor(blue, dark25);
+  &-item {
+    padding: 0px 1rem;
+    font-size: calc($fluid-1 * 0.65);
+    line-height: 4rem;
+    text-align: center;
+    cursor: pointer;
+    &-active {
+      font-weight: 700;
+      background-color: rgba(scalecolor(blue, base), 0.15);
+      border-left: 1px solid scalecolor(blue, dark25);
+      border-right: 1px solid scalecolor(blue, dark25);
+    }
+  }
+}

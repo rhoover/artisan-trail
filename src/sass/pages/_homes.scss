@@ -1,0 +1,98 @@
+.homes {
+  row-gap: 1.5rem;
+}
+
+.beer-home {
+  @extend %artisan-home;
+  &-intro {
+    @extend %artisan-home-intro;
+  }
+  &-content {
+    @extend %artisan-home-content;
+  }
+  &-item {
+    @extend %artisan-home-item;
+    &-image {
+      @extend %artisan-home-item-image;
+    }
+    &-text {
+      @extend %artisan-home-item-text;
+    }
+  }
+}
+
+.cheese-home {
+  @extend %artisan-home;
+  &-intro {
+    @extend %artisan-home-intro;
+  }
+  &-content {
+    @extend %artisan-home-content;
+  }
+  &-item {
+    @extend %artisan-home-item;
+    &-image {
+      @extend %artisan-home-item-image;
+    }
+    &-text {
+      @extend %artisan-home-item-text;
+    }
+  }
+}
+
+.ciders-home {
+  @extend %artisan-home;
+  &-intro {
+    @extend %artisan-home-intro;
+  }
+  &-content {
+    @extend %artisan-home-content;
+  }
+  &-item {
+    @extend %artisan-home-item;
+    &-image {
+      @extend %artisan-home-item-image;
+    }
+    &-text {
+      @extend %artisan-home-item-text;
+    }
+  }
+}
+
+.wines-home {
+  @extend %artisan-home;
+  &-intro {
+    @extend %artisan-home-intro;
+  }
+  &-content {
+    @extend %artisan-home-content;
+  }
+  &-item {
+    @extend %artisan-home-item;
+    &-image {
+      @extend %artisan-home-item-image;
+    }
+    &-text {
+      @extend %artisan-home-item-text;
+    }
+  }
+}
+
+.distillers-home {
+  @extend %artisan-home;
+  &-intro {
+    @extend %artisan-home-intro;
+  }
+  &-content {
+    @extend %artisan-home-content;
+  }
+  &-item {
+    @extend %artisan-home-item;
+    &-image {
+      @extend %artisan-home-item-image;
+    }
+    &-text {
+      @extend %artisan-home-item-text;
+    }
+  }
+}

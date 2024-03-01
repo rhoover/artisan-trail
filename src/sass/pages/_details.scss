@@ -1,0 +1,459 @@
+.details {
+  row-gap: 1.5rem;
+}
+
+.detail {
+  grid-template-rows: repeat(5, max-content);
+  row-gap: 1rem;
+  @include breakpoint($medium) {
+    grid-template-rows: 24rem max-content 1fr;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 35rem) minmax(auto, 35rem) minmax(1rem, 1fr);
+  }
+  &-topper {
+    display: grid;
+    grid-template-columns: 1fr;
+    @include breakpoint($medium) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &-image {
+    justify-self: center;
+    align-self: center;
+    height: 200px;
+    border-radius: 1rem;
+    @include breakpoint($medium) {
+      grid-column: 1 / 2;
+    }
+  }
+  &-meta {
+    text-align: center;
+    @include breakpoint($medium) {
+      grid-column: 2 / 3;
+      align-self: center;
+      justify-self: center;
+    }
+    &-name {
+      font-size: $fluid-2;
+      font-weight: 700;
+    }
+    &-address {
+      color: scalecolor(black, light35);
+    }
+  }
+  &-action {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, max-content);
+    row-gap: 1rem;
+    column-gap: 1rem;
+    @include breakpoint($medium) {
+      grid-row: 2 / 3;
+      align-self: start;
+      justify-self: center;
+      row-gap: 1.5rem;
+      width: 80%;
+    }
+    &-item {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      align-items: center;
+      border-radius: 0.5rem;
+      padding: 1rem 0.5rem;
+      border: 1px solid scalecolor(blue, light35);
+      background-color: scalecolor(white, light75);
+      cursor: pointer;
+      font-size: $fluid-0;
+      @extend %box-shadow;
+      @extend %animate-helper;
+      &:nth-of-type(3) {
+        grid-column: 1 / 3;
+        @include breakpoint($medium) {
+          width: 65%;
+          justify-self: center;
+        }
+      }
+      &-bigtext {
+        font-size: $fluid-1;
+        justify-self: center;
+      }
+      &-check {
+        grid-column: 3 / 4;
+        justify-self: flex-end;
+        align-self: center;
+        opacity: 0;
+        font-size: 3rem;
+        color: scalecolor(green, light25);
+        &-selected {
+          opacity: 1;
+        }
+      }
+      &:hover {
+        background-color: rgba(scalecolor(blue, base), 0.15);
+      }
+      @include breakpoint($medium) {
+        grid-template-columns: 20% 1fr;
+        font-weight: 400;
+      }
+      @include breakpoint($large) {
+        justify-items: center;
+      }
+      & svg {
+        height: 25px;
+        width: 25px;
+        margin: 0px 0.75rem 0px 0.5rem;
+        fill: scalecolor(green, base);
+        stroke-width: 2px;
+        @include breakpoint($medium) {
+          font-weight: 400;
+          height: 40px;
+          width: 40px;
+        }
+      }
+      & a {
+        text-align: center;
+        font-weight: 400;
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+  &-thirdparty {
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 1rem;
+    cursor: pointer;
+    &-share {
+      display: none;
+      &-visible {
+        display: block;
+        height: 32px;
+        width: 32px;
+      }
+    }
+    & a {
+      height: 32px;
+      width: 32px;
+      & svg {
+        height: 32px;
+        width: 32px;
+      }
+    }
+    & p {
+      height: 32px;
+      width: 32px;
+      & svg {
+        height: 32px;
+        width: 32px;
+      }
+    }
+  }
+  &-tabs {
+    &-row {
+      @extend %tabs;
+    }
+    &-item {
+      @extend %tabs-item;
+      &:hover {
+        color: scalecolor(blue, dark25);
+        text-decoration: underline;
+        text-decoration-color: scalecolor(blue, dark25);
+      }
+      &-active {
+        @extend %tabs-item-active;
+      }
+    }
+  }
+  &-panel {
+    @extend %panel;
+    @include breakpoint($medium) {
+      grid-column: 2 / 3;
+    }
+    &-active {
+      @extend %panel-active;
+    }
+    &-header {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+      grid-column: 1 / 3;
+      padding-left: 1rem;
+      border-radius: 0.25rem;
+      border: 1px solid scalecolor(blue, base);
+      background-color: rgba(scalecolor(blue, light45), 0.35);
+      &-image {
+        font-style: italic;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      @include breakpoint($medium) {
+        grid-column: 1 / 3;
+      }
+      @include breakpoint($large) {
+        grid-column: 1 / 4;
+      }
+      & p {
+        color: scalecolor(black, base);
+      }
+    }
+    &-weather-current {
+      display: grid;
+      grid-template-rows: max-content max-content 5rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid scalecolor(blue, dark25);
+      background-color: scalecolor(white, light75);
+      border-radius: 0.45rem;
+      @extend %box-shadow;
+      &-header {
+        grid-row: 1 / 2;
+        grid-column: 1 / 4;
+        margin: -1rem -1rem 0rem -1rem;
+        padding: 1rem 0px 1rem 1rem;
+        background-color: scalecolor(blue, light55);
+      }
+      & img {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        align-self: flex-start;
+        justify-self: center;
+        background-color: scalecolor(blue, light85);
+        border: 1px solid scalecolor(blue, base);
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+      }
+      & p {
+        &:first-of-type { // desc
+          grid-row: 2 / 3;
+          grid-column: 2 / 3;
+          align-self: center;
+          font-weight: 700;
+          font-size: $fluid-0;
+          text-align: center;
+        }
+        &:nth-of-type(2) { // current
+          grid-row: 2 / 3;
+          grid-column: 3 / 4;
+          align-self: center;
+          font-weight: 700;
+          font-size: $fluid-0;
+          text-align: center;
+        }
+        &:nth-of-type(3) { // min
+          grid-row: 3 / 4;
+          grid-column: 1 / 2;
+          align-self: center;
+          text-align: center;
+        }
+        &:nth-of-type(4) { // max
+          grid-row: 3 / 4;
+          grid-column: 2 / 3;
+          align-self: center;
+          text-align: center;
+        }
+        &:nth-of-type(5) { // precip
+          grid-row: 3 / 4;
+          grid-column: 3 / 4;
+          align-self: center;
+          text-align: center;
+        }
+      }
+    }
+    &-weather-fiveday {
+      display: grid;
+      grid-template-rows: repeat(5, max-content);
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 1rem;
+      border-radius: 0.45rem;
+      padding: 1rem;
+      border: 1px solid scalecolor(blue, base);
+      background-color: scalecolor(white, light55);
+      @extend %box-shadow;
+      &-header {
+        grid-row: 1 / 2;
+        grid-column: 1 / 6;
+        margin: -1rem -1rem 0rem -1rem;
+        padding: 1rem 0px 1rem 1rem;
+        background-color: scalecolor(blue, light55);
+      }
+      &-days {
+        grid-column: 1 / 6;
+        display: flex;
+        justify-content: space-around;
+        font-weight: 700;
+      }
+      &-icons {
+        grid-column: 1 / 6;
+        display: flex;
+        justify-content: space-around;
+        & img {
+          background-color: scalecolor(blue, light85);
+          border: 1px solid scalecolor(blue, base);
+          border-radius: 50%;
+          height: 50px;
+          width: 50px;
+        }
+      }
+      &-desc {
+        grid-column: 1 / 6;
+        display: flex;
+        justify-content: space-around;
+      }
+      &-temps {
+        grid-column: 1 / 6;
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+    &-yelpcard {
+      display: grid;
+      grid-template-columns: 30% 1fr;
+      column-gap: 1rem;
+      padding: 1rem;
+      border: 1px solid scalecolor(blue, light15);
+      background-color: scalecolor(white, light75);
+      border-radius: 0.25rem;
+      color: scalecolor(black, base);
+      font-size: $fluid-0;
+      @extend %box-shadow;
+      &-image {
+        grid-column: 1 / 2;
+        object-fit: cover;
+        height: 100px;
+        width: 100px;
+        justify-self: center;
+      }
+      &-meta {
+        grid-column: 2 / 3;
+        &-name {
+          align-self: center;
+          font-weight: 700;
+        }
+        &-address {
+          grid-column: 2 / 3;
+          align-self: center;
+          font-size: $fluid-0;
+        }
+        &-location {
+          grid-column: 2 / 3;
+          align-self: center;
+          font-size: $fluid-0;
+        }
+      }
+      &-yelp {
+        grid-column: 1 / 3;
+        display: grid;
+        grid-template-columns: 50% 1fr;
+        grid-template-rows: repeat(2, max-content);
+        column-gap: 0.5rem;
+        row-gap: 1rem;
+        margin-top: 1rem;
+        &-stars {
+          grid-column: 2 / 3;
+          grid-row: 1 / 2;
+          align-self: center;
+          justify-self: start;
+        }
+        &-reviews {
+          grid-column: 1 / 2;
+          grid-row: 1 / 2;
+          align-self: center;
+          justify-self: start;
+        }
+        &-phone {
+          padding: 0.5rem;
+          align-self: center;
+          grid-row: 2 / 3;
+          font-size: 0.75rem;
+          color: scalecolor(black, dark25);
+          background-color: scalecolor(blue, light95);
+          text-decoration: none;
+          border-radius: 0.25rem;
+          border: 1px solid scalecolor(blue, dark25);
+          box-shadow: 2px 2px 3px 0px rgba(scalecolor(blue, dark75), 0.3);
+          & svg {
+            fill: scalecolor(blue, dark25);
+            margin-bottom: -1rem;
+            height: 30px;
+            width: 30px;
+          }
+        }
+        &-url {
+          grid-row: 2 / 3;
+          color: scalecolor(black, dark25);
+          background-color: scalecolor(blue, light95);
+          font-size: 0.75rem;
+          text-decoration: none;
+          text-align: center;
+          border-radius: 0.25rem;
+          border: 1px solid scalecolor(blue, dark25);
+          box-shadow: 2px 2px 3px 0px rgba(scalecolor(blue, dark75), 0.3);
+          & img {
+            height: 25px;
+            margin-bottom: -0.25rem;
+          }
+        }
+      }
+    }
+  }
+  &-modal {
+    @extend %detail-modal;
+    @include breakpoint($medium) {
+      grid-column: 2 / 4;
+      width: 55vw;
+    }
+    &-image {
+      @extend %detail-modal-image;
+    }
+    &-congrats {
+      @extend %detail-modal-congrats;
+    }
+    &-text {
+      @extend %detail-modal-text;
+      &:nth-of-type(2) {
+        grid-row: 2 / 3;
+      }
+      &:nth-of-type(3) {
+        grid-row: 3 / 4;
+      }
+    }
+    &-icon {
+      @extend %detail-modal-icon;
+    }
+    &-open {
+      @extend %detail-modal-open;
+    }
+  }
+  &-modaltwo {
+    @extend %detail-modal;
+    @include breakpoint($medium) {
+      grid-column: 2 / 4;
+      width: 55vw;
+    }
+    &-image {
+      @extend %detail-modal-image;
+    }
+    &-congrats {
+      @extend %detail-modal-congrats;
+    }
+    &-text {
+      @extend %detail-modal-text;
+      & a {
+        color: scalecolor(blue, light25);
+      }
+    }
+    &-icon {
+      @extend %detail-modal-icon;
+    }
+    &-open {
+      @extend %detail-modal-open;
+    }
+  }
+}

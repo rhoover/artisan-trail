@@ -1,0 +1,26 @@
+.share-everywhere {
+  display: none;
+  left: 0px;
+  border-radius: 0% 30% 30% 0%;
+  border-right: 1px solid scalecolor(blue, dark25);
+  @extend %scroll-share;
+  & svg {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 65%;
+    height: 65%;
+    fill: scalecolor(white, light35);
+  }
+  &-visible {
+    display: block;
+  }
+  & p {
+    position: absolute;
+    top: 40px;
+    left: 7px;
+    color: scalecolor(white, light35);
+    font-size: 0.85rem;
+  }
+}
