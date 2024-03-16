@@ -1,7 +1,7 @@
 var nsg = require('node-sprite-generator');
 
 nsg({
-    src: ['src/img/artisans-logos/beer/logo100/*.png'],
+    src: ['src/img/artisans-logos/brewers/logo100/*.png'],
     spritePath: 'src/img/sprites/breweries-list-sprite.png',
     stylesheetPath: 'src/sass/sprites/_breweries-list-sprite.scss',
     layout: 'packed',
