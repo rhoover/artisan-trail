@@ -1,6 +1,6 @@
 .map-all {
   grid-template-rows: min-content 1fr;
-  row-gap: 1rem;
+  row-gap: 16px;
 }
 
 .map-choose {
@@ -22,7 +22,7 @@
     display: none;
     height: 90%;
     border: 1px solid scalecolor(blue, base);
-    border-radius: 0.5rem;
+    border-radius: 8px;
     padding: 2px;
     position: relative;
     &-active {
@@ -46,10 +46,10 @@
     overflow-y: auto;
     &-item {
       display: grid;
-      grid-template-columns: 40% 60%;
+      grid-template-columns: .40fr .60fr;
       grid-template-rows: 1fr 1fr;
       align-items: center;
-      padding: 0.75rem 0.5rem 0.75rem 0px;
+      padding: 12px 8px 12px 0px;
       border-bottom: 1px solid scalecolor(blue, base);
       cursor: pointer;
       &-logo {
@@ -88,11 +88,11 @@
 
 .artisan-map-infoslider {
   display: grid;
-  grid-template-columns: 25% 75%;
-  column-gap: 0.5rem;
+  grid-template-columns: .25fr .75fr;
+  column-gap: 8px;
   justify-items: center;
   font-size: $fluid-0;
-  padding: 0.5rem 0.5rem;
+  padding: 8px 8px;
   background-image: linear-gradient(rgba(scalecolor(white, base), 1.0), rgba(scalecolor(white, light25), 1.0));
   &-image {
     grid-column: 1 / 2;
@@ -102,7 +102,7 @@
   }
   &-details {
     grid-column: 2 / 3;
-    row-gap: .75rem;
+    row-gap: 12px;
     display: grid;
     align-items: center;
     color: scalecolor(black, base);
@@ -118,8 +118,8 @@
     color: scalecolor(blue, base);
   }
   &-button {
-    padding: 0.25rem;
-    border-radius: 0.25rem;
+    padding: 4px;
+    border-radius: 4px;
     border: 1px solid scalecolor(blue, base);
     font-size: calc(1rem + .25*(100vw - 20rem)/98.75);
     color: scalecolor(blue, base);

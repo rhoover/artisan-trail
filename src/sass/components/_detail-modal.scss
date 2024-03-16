@@ -2,13 +2,13 @@
   display: grid;
   position: absolute;
   width: 95vw;
-  grid-template-columns: 25% 60% 15%;
+  grid-template-columns: .25fr .60fr .15fr;
   grid-template-rows: max-content;
-  row-gap: 1rem;
+  row-gap: 16px;
   justify-self: center;
-  height: 12rem;
-  padding: 1rem;
-  border-radius: .45rem;
+  height: 192px;
+  padding: 16px;
+  border-radius: 7.2px;
   border: 1px solid scalecolor(blue, dark25);
   box-shadow:
     0.4px 0.4px 0.6px rgba(0, 0, 0, 0.027),

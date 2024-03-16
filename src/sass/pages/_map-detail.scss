@@ -1,7 +1,7 @@
 .map-detail { 
   margin-top: 5rem;
   // this has to be here so google maps has a height to inherit, won't inherit min-height
-  height: calc(100vh - 7rem);
+  height: calc(100vh - 112px);
 }
 
 #map {
@@ -10,11 +10,11 @@
 
 .artisan-map-infoslider {
   display: grid;
-  grid-template-columns: 25% 75%;
-  column-gap: 0.5rem;
+  grid-template-columns: .25fr .75fr;
+  column-gap: 8px;
   justify-items: center;
   font-size: $fluid-0;
-  padding: 0.5rem 0.5rem;
+  padding: 8px 8px;
   background-image: linear-gradient(rgba(scalecolor(white, base), 1.0), rgba(scalecolor(white, light25), 1.0));
   &-image {
     grid-column: 1 / 2;
@@ -35,7 +35,7 @@
     font-size: calc($fluid-0 * 0.75);
   }
   &-link {
-    padding-top: .75rem;
+    padding-top: 12px;
     outline: none;
     color: scalecolor(blue, base);
   }

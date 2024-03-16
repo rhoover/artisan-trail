@@ -1,10 +1,10 @@
 .artisans {
   &-list {
-    row-gap: 1.5rem;
+    row-gap: 24px;
     &-items {
       @extend %artisans-items;
       @include breakpoint($medium) {
-        row-gap: 2rem;
+        gap: 32px;
       }
     }
     &-search {
@@ -15,7 +15,7 @@
       }
       &-label {
         @extend %search-label;
-        top: -0.75rem;
+        top: -21px;
       }
       &-input {
         @extend %inputs;
@@ -45,10 +45,10 @@
       }
       &-moosedog {
         @extend %artisans-item;
-        max-height: 10rem;
-        border-radius: 0.5rem;
+        max-height: 160px;
+        border-radius: 8px;
         border: 1px solid scalecolor(blue, base);
-        padding: 0.5rem 0px;
+        padding: 8px 0px;
         background-color: scalecolor(white, light75);
         &-logo {
           grid-row: 1 / 3;
