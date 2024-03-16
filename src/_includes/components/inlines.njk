@@ -133,17 +133,17 @@
     <script>
       {{ js | jsmin | safe }}
     </script> 
+    </script>
+    <!-- google maps herself must speak on the matter -->
+    <script async defer 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEBOmZu2tJSCVLk9CoPUQFU10EnFyBv9M&callback=initMap">
+    </script>
     <!-- map and trail build behavior -->
     {% set js %}
       {% include "../../js/inline/map-all.js" %}
     {% endset %}
     <script>
       {{ js | jsmin | safe }}
-    </script>
-    </script>
-    <!-- google maps herself must speak on the matter -->
-    <script async defer 
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEBOmZu2tJSCVLk9CoPUQFU10EnFyBv9M&callback=initMap">
     </script>
   {% endif %}
 
