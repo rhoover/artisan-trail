@@ -3,6 +3,8 @@ node_modules
 /dist
 /src/server
 package-lock.json
+package.json
+artisans-service-worker-min.js
 
 # local env files
 .env.local
