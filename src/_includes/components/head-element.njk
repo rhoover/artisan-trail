@@ -15,6 +15,13 @@
       </script>
     {% endif %}
     
+    {% if (page.fileSlug == 'details') %}
+      <!-- Detail Page JSON -->
+      <script id="detailData" type="application/json">
+        {{artisan | stringFromArtisanObject | safe}}
+      </script>
+    {% endif %}
+
     <!-- Critical Styles -->
     {% set critical %}
       {% include "../../critical/critical.css" %}
@@ -59,12 +66,6 @@
     <!-- Chrome for Android Tool Bar Color -->
     <meta name="theme-color" content="#5b6dc8">
 
-    <!-- The Essential Links -->
-    <link rel="icon" href="/favicon.ico">
-    <link rel="author" href="http://www.moosedog.io">
-    <link rel="canonical" href="https://vermontartisans.org{{ page.url }}">
-    <link rel="manifest" href="/manifest.webmanifest">
-
     <!-- Facebook -->
     <meta property="og:url" content="https://vermontartisans.org" />
     <meta property="og:type" content="website" />
@@ -81,12 +82,11 @@
     <meta property="twitter:description" content="A Comprehensive Mobile Reference and Directory of Vermont's Artisans and Their Communities" />
     <meta property="twitter:image" content="https://vermontartisans.org/img/trail-sign.png" />
 
-    {% if (page.fileSlug == 'details') %}
-      <!-- Detail Page JSON -->
-      <script id="detailData" type="application/json">
-        {{artisan | stringFromArtisanObject | safe}}
-      </script>
-    {% endif %}
+    <!-- The Essential Links -->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="author" href="http://www.moosedog.io">
+    <link rel="canonical" href="https://vermontartisans.org{{ page.url }}">
+    <link rel="manifest" href="/manifest.webmanifest">
 
     <!-- JSON-LD Structured Data -->
     {% schemaDataShortCode meta %}
