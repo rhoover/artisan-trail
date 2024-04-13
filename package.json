@@ -6,17 +6,18 @@
   "scripts": {
     "watch:critical": "sass --style compressed --no-source-map --watch src/sass/critical.scss:src/critical/critical.css",
     "watch:eleventy": "rm -rf dist && ELEVENTY_RUN_MODE=serve npx @11ty/eleventy --serve",
+    "serviceworker:create": "node src/_eleventy/utilities/service-worker-create.js",
+    "serviceworker:min": "terser artisans-service-worker.js -o artisans-service-worker-min.js",
     "serve": "npm-run-all --parallel watch:eleventy watch:critical",
-    "build:final": "rm -rf dist && ELEVENTY_RUN_MODE=build npx @11ty/eleventy",
-    "build": "npm-run-all serviceworker build:final",
+    "build:start": "rm -rf dist && ELEVENTY_RUN_MODE=build npx @11ty/eleventy",
+    "build": "run-s serviceworker:create serviceworker:min build:start",
     "beerlistsprite": "node src/bin/breweries.js",
     "boozelistsprite": "node src/bin/distillers.js",
     "cheeselistsprite": "node src/bin/cheese.js",
     "winelistsprite": "node src/bin/wines.js",
     "allartisandata": "node src/bin/all-artisan-data.js",
     "ciderlistsprite": "node src/bin/ciders.js",
-    "alllistsprite": "node src/bin/all.js",
-    "serviceworker": "terser artisans-service-worker.js -o artisans-service-worker-min.js"
+    "alllistsprite": "node src/bin/all.js"
   },
   "keywords": [],
   "author": "MooseDog Studios - Robin Hoover",
