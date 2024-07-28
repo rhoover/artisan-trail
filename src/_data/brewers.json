@@ -1533,6 +1533,25 @@
         "instagram":"",
         "advocate": "https://www.beeradvocate.com/beer/profile/31645/",
         "region": "north-central"
+    },
+    {
+        "name": "The Tropic Brewing",
+        "address": "40 Foundry Street",
+        "city": "Waterbury",
+        "state": "VT",
+        "zip": "05676",
+        "latitude": 44.33763042586468,
+        "longitude":  -72.75450754070128,
+        "logo100": "/img/artisans-logos/brewers/logo100/tropic.png",
+        "logo200": "/img/artisans-logos/brewers/logo200/tropic.png",
+        "selector": "tropic",
+        "url":"",
+        "phone":"802.498.7767",
+        "facebook":"https://www.facebook.com/people/The-Tropic/61557806818481/",
+        "twitter":"",
+        "googleplus":"",
+        "instagram":"https://www.instagram.com/thetropicbrewing/",
+        "advocate": "https://www.beeradvocate.com/beer/profile/68080/"
     }
   ]
 
