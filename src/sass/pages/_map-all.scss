@@ -95,6 +95,8 @@
   font-size: $fluid-0;
   padding: 8px 8px;
   background-image: linear-gradient(rgba(scalecolor(white, base), 1.0), rgba(scalecolor(white, light25), 1.0));
+  border: 1px solid scalecolor(blue, base);
+  border-radius: 8px;
   &-image {
     grid-column: 1 / 2;
     & img {
