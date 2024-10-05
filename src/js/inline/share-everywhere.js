@@ -11,15 +11,15 @@
   var contentElemPos = contentElem[0].offsetTop;
 
   if (navigator.share) {
-    window.addEventListener('scroll', shareButtonVisibility);
-    function shareButtonVisibility() {
-      var scrollPos = window.scrollY;
-      if (scrollPos >= contentElemPos) {
+    // window.addEventListener('scroll', shareButtonVisibility);
+    // function shareButtonVisibility() {
+    //   var scrollPos = window.scrollY;
+    //   if (scrollPos >= contentElemPos) {
         shareButton.classList.add('share-everywhere-visible');
-      } else {
-        shareButton.classList.remove('share-everywhere-visible');
-      };      
-    };
+    //   } else {
+    //     shareButton.classList.remove('share-everywhere-visible');
+    //   };      
+    // };
 
     shareButton.addEventListener('click', shareButtonStuff);
     function shareButtonStuff() {
